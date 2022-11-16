@@ -9,6 +9,9 @@
   - Gorutines
   - CLI
 
+## Packages
+- [go-sqlite3](https://github.com/mattn/go-sqlite3)
+
 ## Development Process
 
 ### 1) Setup
@@ -42,3 +45,10 @@ protoc --go_out=. --go_opt=paths=source_relative \
 ### 2) Creating Database Tables
 - Create folder and mdb.go file
 - Create email entry function
+
+### 3) Implementing CRUD Operations
+- Creating Email function
+- Creat a function to get an email
+- Creat a function to update an email
+- Create a function to delete an email
+- Create a function to get batch email
