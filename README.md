@@ -38,3 +38,7 @@ protoc --go_out=. --go_opt=paths=source_relative \
   --go-grpc_out=. --go-grpc_opt=paths=source_relative \
   Proto/mail.proto
 ```
+
+### 2) Creating Database Tables
+- Create folder and mdb.go file
+- Create email entry function
