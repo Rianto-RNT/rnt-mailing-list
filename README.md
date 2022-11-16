@@ -52,3 +52,6 @@ protoc --go_out=. --go_opt=paths=source_relative \
 - Creat a function to update an email
 - Create a function to delete an email
 - Create a function to get batch email
+
+### 4) JSON Data Processing Functions
+- Working with JSON API
