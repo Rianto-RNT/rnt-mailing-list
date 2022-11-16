@@ -47,7 +47,7 @@ func emailEntryFromRow(row *sql.Rows) (*EmailEntry, error) {
 	}
 
 	t := time.Unix(confirmedAt, 0)
-	return &EmailEntry{Id: id, Email: email, ConfirmedAt: &t, OptOut: optOut}
+	return &EmailEntry{Id: id, Email: email, ConfirmedAt: &t, OptOut: optOut}, nil
 }
 
 func CreatingEmail(db *sql.DB, email string) error {
@@ -111,7 +111,7 @@ func DeleteEmail(db *sql.DB, email string) error {
 	return nil
 }
 
-type GetEmailBatchQuery struct {
+type GetEmailBatchQueryParams struct {
 	Page  int
 	Count int
 }
