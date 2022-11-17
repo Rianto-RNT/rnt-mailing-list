@@ -4,6 +4,8 @@ import (
 	"database/sql"
 	"log"
 	"time"
+
+	"github.com/mattn/go-sqlite3"
 )
 
 type EmailEntry struct {
@@ -50,7 +52,7 @@ func emailEntryFromRow(row *sql.Rows) (*EmailEntry, error) {
 	return &EmailEntry{Id: id, Email: email, ConfirmedAt: &t, OptOut: optOut}, nil
 }
 
-func CreatingEmail(db *sql.DB, email string) error {
+func CreateEmail(db *sql.DB, email string) error {
 	_, err := db.Exec(`INSERT INTO 
 	emails(email, confirmed_at, opt_out)
 	VALUES(?, 0, false)`, email)
@@ -62,7 +64,7 @@ func CreatingEmail(db *sql.DB, email string) error {
 	return nil
 }
 
-func Getemail(db *sql.DB, email string) (*EmailEntry, error) {
+func GetEmail(db *sql.DB, email string) (*EmailEntry, error) {
 	rows, err := db.Query(`
 	SELECT id, email, confirmed_at, opt_out
 	FROM emails

@@ -55,3 +55,6 @@ protoc --go_out=. --go_opt=paths=source_relative \
 
 ### 4) JSON Data Processing Functions
 - Working with JSON API
+
+### 5) JSON Endpoints
+- Create CRUD email endpoints function
