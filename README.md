@@ -58,3 +58,8 @@ protoc --go_out=. --go_opt=paths=source_relative \
 
 ### 5) JSON Endpoints
 - Create CRUD email endpoints function
+
+### 6) Testing JSON API
+- Setup server.go
+- JSON API Testing with Thunder client (vs code extention)
+- Make CRUD emails request

@@ -15,6 +15,14 @@ type EmailEntry struct {
 	OptOut      bool
 }
 
+// Example output request
+// {
+// 	"Id": 3,
+// 	"Email": "test@example.com",
+// 	"ConfirmedAt": "1970-01-01T08:00:00+08:00",
+// 	"OptOut": false
+// }
+
 func TryCreate(db *sql.DB) {
 	_, err := db.Exec(`	
 		CREATE TABLE emails (
