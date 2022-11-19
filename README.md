@@ -71,3 +71,7 @@ protoc --go-grpc_out=. --go-grpc_opt=paths=source_relative <rnt-dir/file-name.pr
 - Create gRPC API directory and new file grpcapi.go
 - Implementing mail.proto in grpcapi
 - Create function to specify email entry
+
+### 8) gRPC Endpoints
+- Create CRUD Operation gRPC in grpcapi.go file
+- Setup gRPC server

@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"log"
+	"rntmailinglist/grpcapi"
 	"rntmailinglist/jsonapi"
 	"rntmailinglist/mdb"
 
@@ -48,12 +49,12 @@ func main() {
 		wg.Done()
 	}()
 
-	// wg.Add(1)
-	// go func() {
-	// 	log.Printf("starting gRPC API server...\n")
-	// 	grpcapi.Serve(db, args.BindGrpc)
-	// 	wg.Done()
-	// }()
+	wg.Add(1)
+	go func() {
+		log.Printf("starting gRPC API server...\n")
+		grpcapi.Serve(db, args.BindGrpc)
+		wg.Done()
+	}()
 
 	wg.Wait()
 }
