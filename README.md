@@ -63,3 +63,7 @@ protoc --go_out=. --go_opt=paths=source_relative \
 - Setup server.go
 - JSON API Testing with Thunder client (vs code extention)
 - Make CRUD emails request
+
+### 7) Protocol Buffers
+- New directory and file mail.proto
+- Create emails CRUD operation in mail.proto file
