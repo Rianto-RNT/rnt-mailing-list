@@ -37,9 +37,8 @@ Install by placing the extracted binary somewhere in your `$PATH`. Additional in
 After creating your `.proto` file, this command will generate the necessary code.
 
 ```sh
-protoc --go_out=. --go_opt=paths=source_relative \
-  --go-grpc_out=. --go-grpc_opt=paths=source_relative \
-  Proto/mail.proto
+protoc --go_out=. --go_opt=paths=source_relative <rnt-dir/file-name.proto>
+protoc --go-grpc_out=. --go-grpc_opt=paths=source_relative <rnt-dir/file-name.proto>
 ```
 
 ### 2) Creating Database Tables
