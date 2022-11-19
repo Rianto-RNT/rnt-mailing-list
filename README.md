@@ -67,3 +67,8 @@ protoc --go_out=. --go_opt=paths=source_relative \
 ### 7) Protocol Buffers
 - New directory and file mail.proto
 - Create emails CRUD operation in mail.proto file
+
+### 8) gRPC Data Processing Functions
+- Create gRPC API directory and new file grpcapi.go
+- Implementing mail.proto in grpcapi
+- Create function to specify email entry
