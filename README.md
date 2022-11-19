@@ -58,20 +58,31 @@ protoc --go-grpc_out=. --go-grpc_opt=paths=source_relative <rnt-dir/file-name.pr
 ### 5) JSON Endpoints
 - Create CRUD email endpoints function
 
-### 6) Testing JSON API
+### 6) Server CLI
+- Setup server
+- Package arg
+- JSON Server
+- gRPC Server
+### 7) Testing JSON API
 - Setup server.go
 - JSON API Testing with Thunder client (vs code extention)
 - Make CRUD emails request
 
-### 7) Protocol Buffers
+### 8) Protocol Buffers
 - New directory and file mail.proto
 - Create emails CRUD operation in mail.proto file
 
-### 8) gRPC Data Processing Functions
+### 9) gRPC Data Processing Functions
 - Create gRPC API directory and new file grpcapi.go
 - Implementing mail.proto in grpcapi
 - Create function to specify email entry
 
-### 8) gRPC Endpoints
+### 10) gRPC Endpoints
 - Create CRUD Operation gRPC in grpcapi.go file
 - Setup gRPC server
+
+### 11) gRPC Clients
+- Create CRUD Operations in client.go
+- Setup server for client
+- Test Running the server
+- Test Running the client
